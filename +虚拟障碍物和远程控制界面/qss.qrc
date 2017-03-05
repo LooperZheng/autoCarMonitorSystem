@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/radiobutton_unchecked_pressed.png</file>
+        <file>images/radiobutton_unchecked_hover.png</file>
+        <file>images/radiobutton_unchecked.png</file>
+        <file>images/ radiobutton_checked_pressed.png</file>
+        <file>images/radiobutton_checked_hover.png</file>
+        <file>images/radiobutton_checked.png</file>
+        <file>images/33.png</file>
+        <file>images/3333.png</file>
+        <file>images/2222.png</file>
+        <file>images/1111.png</file>
+        <file>images/666.png</file>
+        <file>images/555.png</file>
+        <file>images/444.png</file>
+        <file>images/333.png</file>
+        <file>images/222.png</file>
+        <file>images/111.png</file>
+        <file>images/66.png</file>
+        <file>images/55.png</file>
+        <file>images/44.png</file>
+        <file>images/22.png</file>
+        <file>images/11.png</file>
+        <file>images/6.png</file>
+        <file>images/5.png</file>
+        <file>images/4.png</file>
+        <file>images/3.png</file>
+        <file>images/2.png</file>
+        <file>images/1.png</file>
+    </qresource>
+</RCC>
