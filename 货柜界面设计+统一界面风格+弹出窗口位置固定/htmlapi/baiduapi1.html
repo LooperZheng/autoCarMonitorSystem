@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+	body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=iT5SkKkcaWLGcC5RM2H8Lq6G3ftzSj5m"></script>
+        <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+        <title>地图展示</title>
+</head>
+<body>
+	<div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript" src="http://developer.baidu.com/map/custom/stylelist.js"></script>
+<script type="text/javascript"  LANGUAGE="JScript">
+
+	// 百度地图API功能
+        var map = new BMap.Map("allmap");    // 创建Map实例
+        //var lo=myGrdStn.js();
+        //map.centerAndZoom(new BMap.Point(121.4538, 31.030), 16);  // 初始化地图,设置中心点坐标和地图级别
+        map.centerAndZoom(new BMap.Point(116.417854, 39.921988), 15);  // 初始化地图,设置中心点坐标和地图级别
+	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+        map.addControl(new BMap.ScaleControl());     // 添加比例尺控件
+        //map.setCurrentCity("上海");          // 设置地图显示的城市 此项是必须设置的
+        //map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+
+        //百度地图个性化 默认的风格（午夜蓝）
+        //optional: (midnight normal light dark redalert googlelite grassgreen hardedge )
+        changeMapStyle('midnight')
+
+        function changeMapStyle(style){
+           map.setMapStyle({style:style});
+             $('#desc').html(mapstyles[style].desc);
+        }
+
+        //加载图标（icon）
+        //var pt = new BMap.Point(121.4538, 31.030);
+        //var myIcon = new BMap.Icon("11.jpg", new BMap.Size(150,150));
+        //var marker2 = new BMap.Marker(pt,{icon:myIcon});  // 创建标注
+        //map.addOverlay(marker2);              // 将标注添加到地图中
+
+        //添加多个点并且，点击鼠标显示各个点信息
+        var data_info = [[116.417854,39.921988,"地址：北京市东城区王府井大街88号乐天银泰百货八层"],
+                                         [116.406605,39.921585,"地址：北京市东城区东华门大街"],
+                                         [116.412222,39.912345,"地址：北京市东城区正义路甲5号"]
+                                        ];
+        var opts = {
+                        width : 250,     // 信息窗口宽度
+                        height: 80,     // 信息窗口高度
+                        title : "信息窗口" , // 信息窗口标题
+                        enableMessage:true//设置允许信息窗发送短息
+                    };
+        for(var i=0;i<data_info.length;i++){
+                var marker = new BMap.Marker(new BMap.Point(data_info[i][0],data_info[i][1]));  // 创建标注
+                var content = data_info[i][2];
+                map.addOverlay(marker);               // 将标注添加到地图中
+                addClickHandler(content,marker);
+        }
+        function addClickHandler(content,marker){
+                marker.addEventListener("click",function(e){
+                    openInfo(content, e)}
+                    );
+        }
+        function openInfo(content, e){
+                var p = e.target;
+                var point = new Bmap.Point(p.getPosition().lng, p.getPosition().lat);
+                var infoWindow = new Bmap.InfoWindow(content, opts);
+                map.openInfoWindow(infoWindow, point);
+         }
+</script>
+
+

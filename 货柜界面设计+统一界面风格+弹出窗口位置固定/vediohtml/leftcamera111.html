@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>vedio_play</title> 
+</head>
+<body> 
+
+<div style="text-align:center"> 
+  <button onclick="play()">play</button> 
+  <button onclick="playPause()">pause</button>
+  <br> 
+  <video id="video1" width="420">
+    <source src="/home/zlp/Sherlock.mp4" type="video/mp4">
+    您的浏览器不支持 HTML5 video 标签。
+  </video>
+</div> 
+
+<script> 
+var myVideo=document.getElementById("video1"); 
+
+function playPause()
+{ 
+	  myVideo.pause(); 
+} 
+function play()
+{ 
+	  myVideo.play(); 
+} 
+</script> 
+
+</body> 
+</html>
