@@ -1,0 +1,1124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BoxInfoWidget</class>
+ <widget class="QWidget" name="BoxInfoWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1085</width>
+    <height>585</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="gridLayoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>80</y>
+     <width>731</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="2" column="2">
+     <widget class="QRadioButton" name="radioButton_9">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton：
+QRadioButton::indicator 
+{
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator::unchecked 
+{  
+    image: url(:/images/radiobutton_unchecked.png);
+}
+  
+QRadioButton::indicator:unchecked:hover 
+{   
+    image: url(:/images/radiobutton_unchecked_hover.png);
+}
+  
+QRadioButton::indicator:unchecked:pressed 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator::checked 
+{   
+    image: url(:/images/radiobutton_checked.png);
+}
+QRadioButton::indicator:checked:hover 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator:checked:pressed 
+{ 
+    image: url(:/images/radiobutton_checked_pressed.png);
+}
+QRadioButton:pressed
+{ padding-left:2px;
+  padding-top:2px;}</string>
+      </property>
+      <property name="text">
+       <string>C1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="4">
+     <widget class="QRadioButton" name="radioButton_14">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton：
+QRadioButton::indicator 
+{
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator::unchecked 
+{  
+    image: url(:/images/radiobutton_unchecked.png);
+}
+  
+QRadioButton::indicator:unchecked:hover 
+{   
+    image: url(:/images/radiobutton_unchecked_hover.png);
+}
+  
+QRadioButton::indicator:unchecked:pressed 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator::checked 
+{   
+    image: url(:/images/radiobutton_checked.png);
+}
+QRadioButton::indicator:checked:hover 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator:checked:pressed 
+{ 
+    image: url(:/images/radiobutton_checked_pressed.png);
+}
+QRadioButton:pressed
+{ padding-left:2px;
+  padding-top:2px;}</string>
+      </property>
+      <property name="text">
+       <string>B2</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="5">
+     <widget class="QRadioButton" name="radioButton_20">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton：
+QRadioButton::indicator 
+{
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator::unchecked 
+{  
+    image: url(:/images/radiobutton_unchecked.png);
+}
+  
+QRadioButton::indicator:unchecked:hover 
+{   
+    image: url(:/images/radiobutton_unchecked_hover.png);
+}
+  
+QRadioButton::indicator:unchecked:pressed 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator::checked 
+{   
+    image: url(:/images/radiobutton_checked.png);
+}
+QRadioButton::indicator:checked:hover 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator:checked:pressed 
+{ 
+    image: url(:/images/radiobutton_checked_pressed.png);
+}
+QRadioButton:pressed
+{ padding-left:2px;
+  padding-top:2px;}</string>
+      </property>
+      <property name="text">
+       <string>B8</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="5">
+     <widget class="QRadioButton" name="radioButton_17">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton：
+QRadioButton::indicator 
+{
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator::unchecked 
+{  
+    image: url(:/images/radiobutton_unchecked.png);
+}
+  
+QRadioButton::indicator:unchecked:hover 
+{   
+    image: url(:/images/radiobutton_unchecked_hover.png);
+}
+  
+QRadioButton::indicator:unchecked:pressed 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator::checked 
+{   
+    image: url(:/images/radiobutton_checked.png);
+}
+QRadioButton::indicator:checked:hover 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator:checked:pressed 
+{ 
+    image: url(:/images/radiobutton_checked_pressed.png);
+}
+QRadioButton:pressed
+{ padding-left:2px;
+  padding-top:2px;}</string>
+      </property>
+      <property name="text">
+       <string>B5</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QRadioButton" name="radioButton_11">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton：
+QRadioButton::indicator 
+{
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator::unchecked 
+{  
+    image: url(:/images/radiobutton_unchecked.png);
+}
+  
+QRadioButton::indicator:unchecked:hover 
+{   
+    image: url(:/images/radiobutton_unchecked_hover.png);
+}
+  
+QRadioButton::indicator:unchecked:pressed 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator::checked 
+{   
+    image: url(:/images/radiobutton_checked.png);
+}
+QRadioButton::indicator:checked:hover 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator:checked:pressed 
+{ 
+    image: url(:/images/radiobutton_checked_pressed.png);
+}
+QRadioButton:pressed
+{ padding-left:2px;
+  padding-top:2px;}</string>
+      </property>
+      <property name="text">
+       <string>C3</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="4">
+     <widget class="QRadioButton" name="radioButton_16">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton：
+QRadioButton::indicator 
+{
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator::unchecked 
+{  
+    image: url(:/images/radiobutton_unchecked.png);
+}
+  
+QRadioButton::indicator:unchecked:hover 
+{   
+    image: url(:/images/radiobutton_unchecked_hover.png);
+}
+  
+QRadioButton::indicator:unchecked:pressed 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator::checked 
+{   
+    image: url(:/images/radiobutton_checked.png);
+}
+QRadioButton::indicator:checked:hover 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator:checked:pressed 
+{ 
+    image: url(:/images/radiobutton_checked_pressed.png);
+}
+QRadioButton:pressed
+{ padding-left:2px;
+  padding-top:2px;}</string>
+      </property>
+      <property name="text">
+       <string>B4</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="4">
+     <widget class="QRadioButton" name="radioButton_15">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton：
+QRadioButton::indicator 
+{
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator::unchecked 
+{  
+    image: url(:/images/radiobutton_unchecked.png);
+}
+  
+QRadioButton::indicator:unchecked:hover 
+{   
+    image: url(:/images/radiobutton_unchecked_hover.png);
+}
+  
+QRadioButton::indicator:unchecked:pressed 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator::checked 
+{   
+    image: url(:/images/radiobutton_checked.png);
+}
+QRadioButton::indicator:checked:hover 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator:checked:pressed 
+{ 
+    image: url(:/images/radiobutton_checked_pressed.png);
+}
+QRadioButton:pressed
+{ padding-left:2px;
+  padding-top:2px;}</string>
+      </property>
+      <property name="text">
+       <string>B3</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QRadioButton" name="radioButton_12">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton：
+QRadioButton::indicator 
+{
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator::unchecked 
+{  
+    image: url(:/images/radiobutton_unchecked.png);
+}
+  
+QRadioButton::indicator:unchecked:hover 
+{   
+    image: url(:/images/radiobutton_unchecked_hover.png);
+}
+  
+QRadioButton::indicator:unchecked:pressed 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator::checked 
+{   
+    image: url(:/images/radiobutton_checked.png);
+}
+QRadioButton::indicator:checked:hover 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator:checked:pressed 
+{ 
+    image: url(:/images/radiobutton_checked_pressed.png);
+}
+QRadioButton:pressed
+{ padding-left:2px;
+  padding-top:2px;}</string>
+      </property>
+      <property name="text">
+       <string>C4</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QRadioButton" name="radioButton_5">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton：
+QRadioButton::indicator 
+{
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator::unchecked 
+{  
+    image: url(:/images/radiobutton_unchecked.png);
+}
+  
+QRadioButton::indicator:unchecked:hover 
+{   
+    image: url(:/images/radiobutton_unchecked_hover.png);
+}
+  
+QRadioButton::indicator:unchecked:pressed 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator::checked 
+{   
+    image: url(:/images/radiobutton_checked.png);
+}
+QRadioButton::indicator:checked:hover 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator:checked:pressed 
+{ 
+    image: url(:/images/radiobutton_checked_pressed.png);
+}
+QRadioButton:pressed
+{ padding-left:2px;
+  padding-top:2px;}</string>
+      </property>
+      <property name="text">
+       <string>A5</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QRadioButton" name="radioButton_13">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton：
+QRadioButton::indicator 
+{
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator::unchecked 
+{  
+    image: url(:/images/radiobutton_unchecked.png);
+}
+  
+QRadioButton::indicator:unchecked:hover 
+{   
+    image: url(:/images/radiobutton_unchecked_hover.png);
+}
+  
+QRadioButton::indicator:unchecked:pressed 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator::checked 
+{   
+    image: url(:/images/radiobutton_checked.png);
+}
+QRadioButton::indicator:checked:hover 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator:checked:pressed 
+{ 
+    image: url(:/images/radiobutton_checked_pressed.png);
+}
+QRadioButton:pressed
+{ padding-left:2px;
+  padding-top:2px;}</string>
+      </property>
+      <property name="text">
+       <string>B1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QRadioButton" name="radioButton_7">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton：
+QRadioButton::indicator 
+{
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator::unchecked 
+{  
+    image: url(:/images/radiobutton_unchecked.png);
+}
+  
+QRadioButton::indicator:unchecked:hover 
+{   
+    image: url(:/images/radiobutton_unchecked_hover.png);
+}
+  
+QRadioButton::indicator:unchecked:pressed 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator::checked 
+{   
+    image: url(:/images/radiobutton_checked.png);
+}
+QRadioButton::indicator:checked:hover 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator:checked:pressed 
+{ 
+    image: url(:/images/radiobutton_checked_pressed.png);
+}
+QRadioButton:pressed
+{ padding-left:2px;
+  padding-top:2px;}</string>
+      </property>
+      <property name="text">
+       <string>A7</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QRadioButton" name="radioButton_3">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton：
+QRadioButton::indicator 
+{
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator::unchecked 
+{  
+    image: url(:/images/radiobutton_unchecked.png);
+}
+  
+QRadioButton::indicator:unchecked:hover 
+{   
+    image: url(:/images/radiobutton_unchecked_hover.png);
+}
+  
+QRadioButton::indicator:unchecked:pressed 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator::checked 
+{   
+    image: url(:/images/radiobutton_checked.png);
+}
+QRadioButton::indicator:checked:hover 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator:checked:pressed 
+{ 
+    image: url(:/images/radiobutton_checked_pressed.png);
+}
+QRadioButton:pressed
+{ padding-left:2px;
+  padding-top:2px;}</string>
+      </property>
+      <property name="text">
+       <string>A3</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QRadioButton" name="radioButton_1">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton：
+QRadioButton::indicator 
+{
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator::unchecked 
+{  
+    image: url(:/images/radiobutton_unchecked.png);
+}
+  
+QRadioButton::indicator:unchecked:hover 
+{   
+    image: url(:/images/radiobutton_unchecked_hover.png);
+}
+  
+QRadioButton::indicator:unchecked:pressed 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator::checked 
+{   
+    image: url(:/images/radiobutton_checked.png);
+}
+QRadioButton::indicator:checked:hover 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator:checked:pressed 
+{ 
+    image: url(:/images/radiobutton_checked_pressed.png);
+}
+QRadioButton:pressed
+{ padding-left:2px;
+  padding-top:2px;}</string>
+      </property>
+      <property name="text">
+       <string>A1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QRadioButton" name="radioButton_2">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton：
+QRadioButton::indicator 
+{
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator::unchecked 
+{  
+    image: url(:/images/radiobutton_unchecked.png);
+}
+  
+QRadioButton::indicator:unchecked:hover 
+{   
+    image: url(:/images/radiobutton_unchecked_hover.png);
+}
+  
+QRadioButton::indicator:unchecked:pressed 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator::checked 
+{   
+    image: url(:/images/radiobutton_checked.png);
+}
+QRadioButton::indicator:checked:hover 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator:checked:pressed 
+{ 
+    image: url(:/images/radiobutton_checked_pressed.png);
+}
+QRadioButton:pressed
+{ padding-left:2px;
+  padding-top:2px;}</string>
+      </property>
+      <property name="text">
+       <string>A2</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QRadioButton" name="radioButton_4">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton：
+QRadioButton::indicator 
+{
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator::unchecked 
+{  
+    image: url(:/images/radiobutton_unchecked.png);
+}
+  
+QRadioButton::indicator:unchecked:hover 
+{   
+    image: url(:/images/radiobutton_unchecked_hover.png);
+}
+  
+QRadioButton::indicator:unchecked:pressed 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator::checked 
+{   
+    image: url(:/images/radiobutton_checked.png);
+}
+QRadioButton::indicator:checked:hover 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator:checked:pressed 
+{ 
+    image: url(:/images/radiobutton_checked_pressed.png);
+}
+QRadioButton:pressed
+{ padding-left:2px;
+  padding-top:2px;}</string>
+      </property>
+      <property name="text">
+       <string>A4</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QRadioButton" name="radioButton_8">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton：
+QRadioButton::indicator 
+{
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator::unchecked 
+{  
+    image: url(:/images/radiobutton_unchecked.png);
+}
+  
+QRadioButton::indicator:unchecked:hover 
+{   
+    image: url(:/images/radiobutton_unchecked_hover.png);
+}
+  
+QRadioButton::indicator:unchecked:pressed 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator::checked 
+{   
+    image: url(:/images/radiobutton_checked.png);
+}
+QRadioButton::indicator:checked:hover 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator:checked:pressed 
+{ 
+    image: url(:/images/radiobutton_checked_pressed.png);
+}
+QRadioButton:pressed
+{ padding-left:2px;
+  padding-top:2px;}</string>
+      </property>
+      <property name="text">
+       <string>A8</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="5">
+     <widget class="QRadioButton" name="radioButton_18">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton：
+QRadioButton::indicator 
+{
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator::unchecked 
+{  
+    image: url(:/images/radiobutton_unchecked.png);
+}
+  
+QRadioButton::indicator:unchecked:hover 
+{   
+    image: url(:/images/radiobutton_unchecked_hover.png);
+}
+  
+QRadioButton::indicator:unchecked:pressed 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator::checked 
+{   
+    image: url(:/images/radiobutton_checked.png);
+}
+QRadioButton::indicator:checked:hover 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator:checked:pressed 
+{ 
+    image: url(:/images/radiobutton_checked_pressed.png);
+}
+QRadioButton:pressed
+{ padding-left:2px;
+  padding-top:2px;}</string>
+      </property>
+      <property name="text">
+       <string>B6</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QRadioButton" name="radioButton_10">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton：
+QRadioButton::indicator 
+{
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator::unchecked 
+{  
+    image: url(:/images/radiobutton_unchecked.png);
+}
+  
+QRadioButton::indicator:unchecked:hover 
+{   
+    image: url(:/images/radiobutton_unchecked_hover.png);
+}
+  
+QRadioButton::indicator:unchecked:pressed 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator::checked 
+{   
+    image: url(:/images/radiobutton_checked.png);
+}
+QRadioButton::indicator:checked:hover 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator:checked:pressed 
+{ 
+    image: url(:/images/radiobutton_checked_pressed.png);
+}
+QRadioButton:pressed
+{ padding-left:2px;
+  padding-top:2px;}</string>
+      </property>
+      <property name="text">
+       <string>C2</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QRadioButton" name="radioButton_6">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton：
+QRadioButton::indicator 
+{
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator::unchecked 
+{  
+    image: url(:/images/radiobutton_unchecked.png);
+}
+  
+QRadioButton::indicator:unchecked:hover 
+{   
+    image: url(:/images/radiobutton_unchecked_hover.png);
+}
+  
+QRadioButton::indicator:unchecked:pressed 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator::checked 
+{   
+    image: url(:/images/radiobutton_checked.png);
+}
+QRadioButton::indicator:checked:hover 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator:checked:pressed 
+{ 
+    image: url(:/images/radiobutton_checked_pressed.png);
+}
+QRadioButton:pressed
+{ padding-left:2px;
+  padding-top:2px;}</string>
+      </property>
+      <property name="text">
+       <string>A6</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="5">
+     <widget class="QRadioButton" name="radioButton_19">
+      <property name="styleSheet">
+       <string notr="true">QRadioButton：
+QRadioButton::indicator 
+{
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator::unchecked 
+{  
+    image: url(:/images/radiobutton_unchecked.png);
+}
+  
+QRadioButton::indicator:unchecked:hover 
+{   
+    image: url(:/images/radiobutton_unchecked_hover.png);
+}
+  
+QRadioButton::indicator:unchecked:pressed 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator::checked 
+{   
+    image: url(:/images/radiobutton_checked.png);
+}
+QRadioButton::indicator:checked:hover 
+{  
+    image: url(:/images/radiobutton_unchecked_pressed.png);
+}
+  
+QRadioButton::indicator:checked:pressed 
+{ 
+    image: url(:/images/radiobutton_checked_pressed.png);
+}
+QRadioButton:pressed
+{ padding-left:2px;
+  padding-top:2px;}</string>
+      </property>
+      <property name="text">
+       <string>B7</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTextBrowser" name="textBrowser">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>81</y>
+     <width>291</width>
+     <height>391</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_openBox">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>490</y>
+     <width>99</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>打开货柜</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_closeBox">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>490</y>
+     <width>99</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>关闭货柜</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>288</width>
+     <height>49</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:20pt; color:#0c161c;&quot;&gt;货柜信息平面展示图&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_14">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>20</y>
+     <width>191</width>
+     <height>49</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:20pt; color:#0c161c;&quot;&gt;所选货柜信息&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="windowModality">
+    <enum>Qt::WindowModal</enum>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>90</y>
+     <width>3</width>
+     <height>426</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="windowModality">
+    <enum>Qt::WindowModal</enum>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>90</y>
+     <width>3</width>
+     <height>426</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_15">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>480</y>
+     <width>111</width>
+     <height>49</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; color:#0c161c;&quot;&gt;车右&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_16">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>480</y>
+     <width>111</width>
+     <height>49</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; color:#0c161c;&quot;&gt;车前&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_17">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>480</y>
+     <width>111</width>
+     <height>49</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; color:#0c161c;&quot;&gt;车左&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_18">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>40</y>
+     <width>111</width>
+     <height>49</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; color:#0c161c;&quot;&gt;车后&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
