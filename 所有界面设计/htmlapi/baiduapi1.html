@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+    body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=iT5SkKkcaWLGcC5RM2H8Lq6G3ftzSj5m"></script>
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <title>地图展示</title>
+</head>
+<body>
+    <div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript" src="http://developer.baidu.com/map/custom/stylelist.js"></script>
+<script type="text/javascript"  LANGUAGE="JScript">
+
+    // 百度地图API功能
+    map = new BMap.Map("allmap");
+    //map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+    map.addControl(new BMap.ScaleControl());     // 添加比例尺控件
+    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+    map.centerAndZoom(new BMap.Point(121.4538, 31.030), 16);  // 初始化地图,设置中心点坐标和地图级别
+
+    //百度地图个性化 默认的风格（午夜蓝）
+    //optional: (midnight normal light dark redalert googlelite grassgreen hardedge )
+    changeMapStyle('midnight')
+    function changeMapStyle(style){
+    map.setMapStyle({style:style});
+        $('#desc').html(mapstyles[style].desc);
+    }
+
+    //加载配送站图标（icon）
+     var pt = new BMap.Point(121.436314, 31.02477);
+     var myIcon = new BMap.Icon("配送站48.png", new BMap.Size(50,50));
+     var distribution_center_maker = new BMap.Marker(pt,{icon:myIcon});  // 创建标注
+     distribution_center_maker.disableMassClear();
+     map.addOverlay(distribution_center_maker);  
+     //task
+      var    baiduIconBlue = new BMap.Icon("markers.png", new BMap.Size(23, 25), {  
+                 offset: new BMap.Size(10, 25), // 指定定位位置  
+                   imageOffset: new BMap.Size(0, 0 - 10 * 25) // 设置图片偏移  
+               });  
+      var    baiduIconGrey = new BMap.Icon("markers.png", new BMap.Size(23, 25), {  
+                 offset: new BMap.Size(10, 25), // 指定定位位置  
+                  imageOffset: new BMap.Size(0, 0 - 8 * 25) // 设置图片偏移  
+               });  
+       var    baiduIconRed = new BMap.Icon("markers.png", new BMap.Size(23, 25), {  
+                 offset: new BMap.Size(10, 25), // 指定定位位置  
+                imageOffset: new BMap.Size(0, 0 - 11 * 25) // 设置图片偏移  
+              });  
+      var    baiduIconOrange = new BMap.Icon("markers.png", new BMap.Size(23, 25), {  
+                 offset: new BMap.Size(10, 25), // 指定定位位置  
+                   imageOffset: new BMap.Size(0, 0 - 12 * 25) // 设置图片偏移  
+             });    
+     //vehicle
+     var vehicleIconGreen = new BMap.Icon("v2.png", new BMap.Size(30,30));
+     var vehicleIconRed = new BMap.Icon("v3.png", new BMap.Size(30,30));
+     //data
+    var longitude_info = new Array();
+    var latitude_info = new Array();
+    var task_info = new Array();
+    var startPointLongitude = new Array();
+    var startPointLatitude = new Array();
+    var endPointLongitude = new Array();
+    var endPointLatitude = new Array();
+
+    var line_point_clu = new Array();
+
+    //添加多个点并且，点击鼠标显示各个点信息
+    function taskPathRefresh(){ 
+            //task
+            var taskNum = myRobot.returnTaskNum();
+            //alert(taskNum);
+            longitude_info.length = 0;
+            latitude_info.length = 0;
+            task_info.length = 0;
+            for (var j= 0;  j<taskNum ; j++) {
+                longitude_info[j] = myRobot.returnTaskPointLongitude(j);
+                //alert(longitude_info[j]);
+                latitude_info[j] = myRobot.returnTaskPointLatitude(j);
+                //alert(latitude_info[j]);
+                task_info[j]=  myRobot.returnTaskInfo(j);
+                //alert(task_info[j]);
+            }
+            //path
+            var pathNum = myRobot.returnAllPathPointNum();
+            //alert(pathNum);
+            startPointLongitude.length = 0;
+            startPointLatitude.length = 0;
+            endPointLongitude.length = 0;
+            endPointLatitude.length = 0;
+            for (var i =0; i<pathNum; i++) {
+                startPointLongitude[i] = myRobot.returnAllPathPointLongitudeFrom(i);
+                startPointLatitude[i] = myRobot.returnAllPathPointLatitudeFrom(i);
+                endPointLongitude[i] = myRobot.returnAllPathPointLongitudeEnd(i);
+                endPointLatitude[i] = myRobot.returnAllPathPointLatitudeEnd(i);
+            }
+            //vehicle
+            var vehicle_x = myRobot.returnVehicle_x();
+            var vehicle_y = myRobot.returnVehicle_y();
+            var vehicle_info = myRobot.returnVehicle_info();
+            //display in map
+           taskPathDisplay( vehicle_x, vehicle_y,vehicle_info)
+        }
+
+        function taskPathDisplay(vehicle_x, vehicle_y,vehicle_info){
+            //clear
+            map.clearOverlays();
+
+             //task          
+            var opts = {
+                                    width : 250,     // 信息窗口宽度
+                                    height: 120,     // 信息窗口高度
+                                    title : "任务信息" , // 信息窗口标题
+                                    enableMessage:true//设置允许信息窗发送短息
+                               };
+            var markerCluster = new Array();
+            for(var i=0;i<longitude_info.length;i++){
+                    var pointTask = new BMap.Point(longitude_info[i],latitude_info[i]);
+                    var marker = new BMap.Marker(pointTask,  {icon:baiduIconRed});  // 创建标注
+                    //var content = task_info[i];
+                    map.addOverlay(marker);               // 将标注添加到地图中
+                    markerCluster.push(marker);
+                    //addClickHandler(content,marker);
+                    pointTask = null;
+                    delete pointTask;
+                    //marker.destory();
+                    marker = null;
+                    delete marker;
+            }
+
+            for (var i =0; i<markerCluster.length; i++) {
+            addClickHandler( task_info[i],markerCluster[i]);
+            }
+
+            function addClickHandler(content,marker){
+                    marker.addEventListener("click",function(e){
+                            openInfo(content,e)}
+                    );
+                    //marker.destory();
+                    marker = null;
+            }
+            function openInfo(content,e){
+                    var p = e.target;
+                    var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
+                    var infoWindow = new BMap.InfoWindow(content,opts);  // 创建信息窗口对象
+                    map.openInfoWindow(infoWindow,point); //开启信息窗口
+                    delete point;
+                    delete infoWindow;
+            }
+            //path
+            for (var i =0; i<startPointLongitude.length; i++) {
+                    line_point_clu.length = 0;
+                    var  point1 =  new BMap.Point(startPointLongitude[i], startPointLatitude[i]);
+                    var  point2 =  new BMap.Point(endPointLongitude[i], endPointLatitude[i]);
+                    line_point_clu.push(point1);
+                    line_point_clu.push(point2);
+
+                    var polyline1 = new BMap.Polyline(line_point_clu,
+                    {strokeColor:"red", strokeWeight:4, strokeOpacity:0.5});   //创建折线
+                    map.addOverlay(polyline1);          //增加折线
+                    //free mem
+                    delete point1
+                    point1 =null;
+                    delete point2;
+                    point2 = null;
+                    delete polyline1;
+            }
+
+           // vehicle
+            var v_opts = {
+                        width : 250,     // 信息窗口宽度
+                        height: 120,     // 信息窗口高度
+                        title : "车辆信息" , // 信息窗口标题
+                        enableMessage:true//设置允许信息窗发送短息
+                      };
+
+            var vehiclePoint = new BMap.Point(vehicle_x,vehicle_y);
+            var vehickeMarker = new BMap.Marker(vehiclePoint,{icon:vehicleIconGreen});  // 创建标注
+            var vehicle_content = vehicle_info;
+            map.addOverlay(vehickeMarker);               // 将标注添加到地图中
+            v_addClickHandler(vehicle_content,vehickeMarker);
+            delete vehiclePoint;
+            vehiclePoint = null;
+            delete vehickeMarker;
+            vehickeMarker = null;
+
+            function v_addClickHandler(vehicle_content,vehickeMarker){
+                    vehickeMarker.addEventListener("click",function(v_e){
+                            v_openInfo(vehicle_content,v_e)}
+                    );
+                    delete vehickeMarker;
+                    vehickeMarker = null;
+            }
+            function v_openInfo(vehicle_content,v_e){
+                    var v_p = v_e.target;
+                    var v_point = new BMap.Point(v_p.getPosition().lng, v_p.getPosition().lat);
+                    var v_infoWindow = new BMap.InfoWindow(vehicle_content,v_opts);  // 创建信息窗口对象
+                    map.openInfoWindow(v_infoWindow,v_point); //开启信息窗口
+                    delete v_point;
+                    v_point = null;
+                    delete v_infoWindow;
+                    v_point = null;
+        }
+
+    vehickeMarker.removeEventListener("click",function(v_e){
+                            v_openInfo(vehicle_content,v_e)}
+                    );
+        vehickeMarker.destory();
+        vehickeMarker = null;
+        delete vehickeMarker;
+        //longitude_info.free();
+        for(var i=0;i<markerCluster.length;i++)
+        {      
+     markerCluster[i].addEventListener("click",function(e){
+                            openInfo(content,e)}
+                    );
+            markerCluster[i].destory();
+            markerCluster[i] = null;
+        }
+        markerCluster.destory();
+        markerCluster.length = 0;
+        delete markerCluster;
+    } //end of 
+
+taskPathRefresh();
+</script>
